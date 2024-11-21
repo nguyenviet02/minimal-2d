@@ -81,20 +81,23 @@
 
         var meta = document.createElement('meta');
         meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=no';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
         container.className = "unity-mobile";
         canvas.className = "unity-mobile";
+				canvas.style.width = "428px";
+        canvas.style.height = "240px";
+				// canvas.style.rotate = "90deg";
 
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
-        config.devicePixelRatio = 1;
+        // config.devicePixelRatio = 1;
 
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "720px";
+        canvas.style.width = "1280px";
         canvas.style.height = "720px";
       }
 
